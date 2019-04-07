@@ -1,0 +1,142 @@
+CREATE Table cust
+(
+    salesman_id int,
+    name varchar(20),
+    city varchar(20),
+    commission decimai(3,2),
+    Primary Key(salesman_id)
+    );
+
+CREATE Table customer
+(
+    customer_id int,
+    cust_name varchar(30),
+    city varchar(25),
+    grade int,
+    Primary Key(customer_id)
+    );
+
+
+CREATE Table order1
+(
+    ord_no int,
+    purch_amt float(30),
+    ord_date varchar(25),
+    customer_id int,
+    Primary Key(ord_no)
+    );
+
+
+//Insertion
+
+INSERT into salesman
+values(5001,'James Hoog','New York',0.15);
+
+INSERT into salesman
+values(5002,'Nail Knite','Paris',0.13);
+
+INSERT into salesman
+values(5003,'Lauson Hen','',0.12);
+
+INSERT into salesman
+values(5005,'Pit Alex','London',0.11);
+
+INSERT into salesman
+values(5006,'Mc Lyon','Paris',0.14);
+
+INSERT into salesman
+values(5007,'Paul Adam','Rome',0.13);
+
+
+
+
+INSERT into customer
+values(3001,'Brad Guzan','London');
+
+INSERT into customer
+values(3005,'Graham Zusi','California',200);
+
+INSERT into customer
+values(3002,'Nick Rimando','New York',100);
+
+INSERT into customer
+values(3004,'Fabian Johns','Paris',300);
+
+INSERT into customer
+values(3007,'Brad Davies','New York',200);
+
+INSERT into customer
+values(3009,'Geoff Camero','Berlin',100);
+
+INSERT into customer
+values(3008,'Julian Green','London',300);
+
+
+
+
+INSERT into salesman
+values(5001,'James Hoog','New York',0.15);
+
+INSERT into salesman
+values(5002,'Nail Knite','Paris',0.13);
+
+INSERT into salesman
+values(5005,'Pit Alex','London',0.11);
+
+INSERT into salesman
+values(5006,'Mc Lyon','Paris',0.14);
+
+
+INSERT into order1
+values(70001,150.5,'2012-10-05',3005);
+
+INSERT into order1
+values(70009,270.65,'2012-09-10',3001);
+
+INSERT into order1
+values(70002,65.26,'2012-10-05',3002);
+
+INSERT into order1
+values(70004,110.5,'2012-08-17',3009);
+
+INSERT into order1
+values(70007,948.5,'2012-09-10',3005);
+
+INSERT into order1
+values(70005,2400.6,'2012-07-27',3007);
+
+INSERT into order1
+values(70008,5760,'2012-09-10',3002);
+
+//insert a column in a exsiting table
+
+ALTER table customer
+ADD(colunm_name data_type(size));
+
+//DROP a column in a existing table
+
+ALTER table customer
+     DROP column column_name;
+
+//Modifying existing column's data type and size in a table
+
+ALTER table customer
+     MODIFY column column_name data_type(size);
+
+//change a esiting table name 
+     
+RENAME Table old_table_name
+     To new_table_name
+
+//change a column fild ether NULL nor NOT NULL
+ALTER table table_name
+     MODIFY column column_name data_type(size) NOT NULL;
+
+//Change a existing column name in a table 
+
+ALTER table table_name
+    Change oid_column_name new_column_name data_type(size);
+
+// check a column 
+Alter table table_name
+   Add check(first_name = "Avijit");
