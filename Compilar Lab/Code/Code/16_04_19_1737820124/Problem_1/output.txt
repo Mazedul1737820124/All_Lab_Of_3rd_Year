@@ -1,0 +1,8 @@
+Line = 1 :
+Number of A = 8
+Number of B = 5
+Number of C = 6
+Line = 2 :
+Number of A = 6
+Number of B = 3
+Number of C = 7
